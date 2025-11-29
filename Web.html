@@ -25,7 +25,6 @@
       }
     }
   </script>
-  <meta name="google-site-verification" content="MIO3YhR8IDw4-NTfs4OFZq0sfd8Q5ng0OYMvnFkNljE" />
 </head>
 <body>
   <div class="container">
@@ -33,7 +32,7 @@
 
     {% if not role %}
       <form method="POST">
-        <label>Это проверка на робота введите слово 'user': 
+        <label>Ввидите надпись "user" это проверка на робота: 
           <input name="nickname" id="nickname" oninput="checkAdmin()" />
         </label>
         <div id="adminPass" class="hidden">
@@ -43,31 +42,13 @@
       </form>
     {% else %}
       <p>Вы вошли как <strong>{{ role }}</strong></p>
-      <p>Мы занимаемся тонировкой в городе Островец</p>
-      <p>Качество - не просто стандарт, это наша привычка</p>
-    
-      <div style="text-align: center;">
-        <p>Можете посмотреть на наши работы</p>
-        <a href="https://sites.google.com/view/pictures-site/%D0%B3%D0%BB%D0%B0%D0%B2%D0%BD%D0%B0%D1%8F-%D1%81%D1%82%D1%80%D0%B0%D0%BD%D0%B8%D1%86%D0%B0">
-          <button>Перейти на сайт</button>
-        </a>
-      </div>
-
+      
       {% if role == "user" %}
         <h2>💬 Комментарии</h2>
         <form method="POST">
           <input type="hidden" name="nickname" value="{{ role }}">
           <textarea name="comment" placeholder="Напишите комментарий..."></textarea>
           <button type="submit">Отправить</button>
-        </form>
-
-        <h2>📦 Заказ</h2>
-        <form method="POST">
-          <input type="hidden" name="nickname" value="{{ role }}">
-          <textarea name="order" placeholder="Что вы хотите заказать?"></textarea>
-          <input name="phone" placeholder="Ваш номер телефона" />
-          <small>📞 Только администратор видит ваш номер</small>
-          <button type="submit">Отправить заказ</button>
         </form>
 
         <h2>🔔 Уведомление администратору</h2>
@@ -77,7 +58,7 @@
           <button type="submit">Отправить уведомление</button>
         </form>
 
-        <h2>🎥 Видео после регистрации</h2>
+        <h2>🎥 Видео с Артуриком</h2>
         <div style="text-align:center;">
           <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ"
             title="YouTube video" frameborder="0"
